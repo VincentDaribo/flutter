@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:animate_do/animate_do.dart';
+import 'scan_page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -48,12 +50,13 @@ class ElevatedB1 extends StatelessWidget {
       height: 150,
       child: ElevatedButton.icon(
         onPressed: () {
-          print('bouton 2\n');
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => ScannerPage()));
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(Colors.blueAccent),
         ),
-        icon: Icon(Icons.wifi),
+        icon: Icon(Icons.bluetooth),
         label: Text('Scan bluetooth'),
       ),
     );
@@ -68,7 +71,8 @@ class ElevatedB2 extends StatelessWidget {
       height: 150,
       child: ElevatedButton.icon(
         onPressed: () {
-          print('bouton 2\n');
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => ScannerPage()));
         },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(Colors.blueAccent),
