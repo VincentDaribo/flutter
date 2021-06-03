@@ -11,58 +11,71 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Step 3 : learning how to put images'),
-        backgroundColor: Colors.grey,
+        title: Text('Welcome to Network Scanner'),
+        backgroundColor: Colors.blueAccent[700],
       ),
-      body: Center(
-        child: Column(
-          children: [
-            TextB(),
-            ElevatedB(),
-          ],
-        ),
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/flutter.jpg"), fit: BoxFit.cover)),
+        child: ButtonMain(),
       ),
-      backgroundColor: Colors.green[100],
+      backgroundColor: Colors.white,
     );
   }
 }
 
-class TextB extends StatelessWidget {
+class ButtonMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return TextButton.icon(
-      onPressed: () {
-        print('bouton 1');
-      },
-      icon: Icon(
-        Icons.mood_bad,
-        color: Colors.white70,
-      ),
-      label: Text(
-        'Text Button',
-        style: TextStyle(
-          color: Colors.white70,
-        ),
-      ),
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          ElevatedB1(),
+          ElevatedB2(),
+        ],
       ),
     );
   }
 }
 
-class ElevatedB extends StatelessWidget {
+class ElevatedB1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton.icon(
-      onPressed: () {
-        print('bouton 2\n');
-      },
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+    return SizedBox(
+      width: 200,
+      height: 150,
+      child: ElevatedButton.icon(
+        onPressed: () {
+          print('bouton 2\n');
+        },
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.blueAccent),
+        ),
+        icon: Icon(Icons.wifi),
+        label: Text('Scan bluetooth'),
       ),
-      icon: Icon(Icons.mood),
-      label: Text('Elevated button'),
+    );
+  }
+}
+
+class ElevatedB2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 200,
+      height: 150,
+      child: ElevatedButton.icon(
+        onPressed: () {
+          print('bouton 2\n');
+        },
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.blueAccent),
+        ),
+        icon: Icon(Icons.wifi),
+        label: Text('Scan wifi'),
+      ),
     );
   }
 }
