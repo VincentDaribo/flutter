@@ -1,4 +1,4 @@
-name: step4
+name: net_scanner
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -21,6 +21,7 @@ environment:
   sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
+  flutter_launcher_icons: "^0.8.0"
   flutter:
     sdk: flutter
 
@@ -35,6 +36,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon.png"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

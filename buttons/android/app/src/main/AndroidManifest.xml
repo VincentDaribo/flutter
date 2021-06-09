@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.step4">
    <application
-        android:label="step4"
-        android:icon="@mipmap/ic_launcher">
+        android:label="NetScanner"
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

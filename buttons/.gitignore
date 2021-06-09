@@ -47,7 +47,6 @@ app.*.map.json
 
 test
 web
-android
 build
 ios
 lib
